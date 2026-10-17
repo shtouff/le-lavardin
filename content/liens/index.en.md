@@ -13,8 +13,6 @@ We recommend the two sailing schools below. We learned with them ourselves, and 
 
 [![Yakapartir](logo-yakapartir.png)](https://www.yakapartir.com)
 
-![Sailing in Charente-Maritime](voile-spi.png)
-
 ## Bike hire
 
 In Saint-Martin-de-Ré, hire your bikes from Yootoo. Excellent quality, lovingly maintained — and those stylish black bikes with white polka dots are quite a sight!
