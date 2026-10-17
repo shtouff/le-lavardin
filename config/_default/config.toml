@@ -1,0 +1,5 @@
+theme = "congo"
+baseURL = "https://le-lavardin.com/"
+defaultContentLanguage = "fr"
+defaultContentLanguageInSubdir = false
+enableRobotsTXT = true

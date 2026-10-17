@@ -1,0 +1,5 @@
+languageCode = "fr"
+languageName = "Français"
+weight = 1
+title = "Le Lavardin"
+contentDir = "content/fr"

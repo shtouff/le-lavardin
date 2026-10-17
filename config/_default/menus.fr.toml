@@ -1,0 +1,19 @@
+[[main]]
+  name = "Chambres"
+  pageRef = "chambres"
+  weight = 10
+
+[[main]]
+  name = "Tarifs"
+  pageRef = "tarifs"
+  weight = 20
+
+[[main]]
+  name = "Comment venir"
+  pageRef = "acces"
+  weight = 30
+
+[[main]]
+  name = "Contact"
+  pageRef = "contact"
+  weight = 40

@@ -1,0 +1,24 @@
+colorScheme = "congo"
+defaultAppearance = "light"
+autoSwitchAppearance = true
+web3forms_key = "PLACEHOLDER"
+customCSS = ["css/custom.css"]
+
+[homepage]
+  layout = "page"
+  showRecent = false
+
+[article]
+  showDate = false
+  showAuthor = false
+  showReadingTime = false
+  showTableOfContents = false
+  showEdit = false
+
+[list]
+  showBreadcrumbs = true
+  showSummary = false
+
+[footer]
+  showCopyright = true
+  showThemeAttribution = false
