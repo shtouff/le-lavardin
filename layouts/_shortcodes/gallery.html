@@ -1,12 +1,11 @@
-{{ $glob := .Get "glob" | default "*.jpg" }}
-{{ $images := .Page.Resources.Match $glob }}
+{{ $glob := .Get "glob" }}
+{{ $images := cond (not (not $glob)) (.Page.Resources.Match $glob) (.Page.Resources.ByType "image") }}
 {{ if $images }}
 <div class="grid grid-cols-2 gap-2 my-6 sm:grid-cols-3">
   {{ range $images }}
-    {{ $thumb := .Fill "600x600 webp smart" }}
     <a href="{{ .RelPermalink }}" target="_blank" rel="noopener">
-      <img src="{{ $thumb.RelPermalink }}" alt="{{ $.Page.Title }}"
-           class="rounded-md object-cover w-full aspect-square" loading="lazy">
+      <img src="{{ .RelPermalink }}" alt="{{ $.Page.Title }}"
+           class="rounded-md w-full" loading="lazy">
     </a>
   {{ end }}
 </div>
