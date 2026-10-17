@@ -1,3 +1,23 @@
+[[footer]]
+  name = "Twitter"
+  url = "https://twitter.com/LLavardin"
+  weight = 10
+  [footer.params]
+    icon = "twitter"
+    showName = false
+    target = "_blank"
+    rel = "noopener noreferrer me"
+
+[[footer]]
+  name = "Facebook"
+  url = "https://www.facebook.com/Le-Lavardin-216944855905078/"
+  weight = 20
+  [footer.params]
+    icon = "facebook"
+    showName = false
+    target = "_blank"
+    rel = "noopener noreferrer"
+
 [[main]]
   name = "Chambres"
   pageRef = "chambres"
