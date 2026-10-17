@@ -8,9 +8,9 @@ L'Hermione est un navire de guerre en service de 1779 à 1793. Cette frégate es
 
 En 1793, alors que l'Hermione est postée dans l'embouchure de la Loire pour appuyer les troupes républicaines contre les Vendéens la frégate sombre au large du Croisic.
 
-Depuis juillet 1997, l'Association Hermione-La Fayette s'est lancée dans une formidable aventure, la reconstruction de la frégate Hermione.
+Depuis juillet 1997, l'[Association Hermione-La Fayette](https://www.hermione.com/accueil/) s'est lancée dans une formidable aventure, la reconstruction de la frégate Hermione.
 
-Il est actuellement possible de visiter la frégate à Rochefort (30 kms de La Rochelle) avant son départ le 4 avril 2019 pour les côtes Normandes.
+Il est actuellement possible de visiter la frégate à Rochefort (30 kms de La Rochelle) avant [son départ le 4 avril 2019 pour les côtes Normandes](https://www.hermione.com/voyage/navigation-2019/).
 
 Je vous recommande vivement cette visite ! Elle est très instructive et vous pouvez voir travailler les bénévoles et discuter avec l'équipage.
 
