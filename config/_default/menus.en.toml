@@ -9,6 +9,11 @@
   weight = 20
 
 [[main]]
+  name = "Our commitments"
+  pageRef = "nos-engagements"
+  weight = 35
+
+[[main]]
   name = "Contact"
   pageRef = "contact"
   weight = 40
