@@ -15,7 +15,7 @@ from bs4 import BeautifulSoup
 WP_BASE = os.environ.get("WP_BASE", "https://www-le-lavardin.kappa.lvrdn.name")
 WP_USER = os.environ.get("WP_USER", "")
 WP_PASS = os.environ.get("WP_PASS", "")
-UPLOADS_DIR = Path("/home/shtouff/github/shtouff/le-lavardin/static/images/uploads")
+UPLOADS_DIR = Path("/home/shtouff/github/shtouff/le-lavardin/uploads")
 CONTENT_DIR = Path("/home/shtouff/github/shtouff/le-lavardin/content/posts")
 
 AUTH = b64encode(f"{WP_USER}:{WP_PASS}".encode()).decode()
