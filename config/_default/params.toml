@@ -1,7 +1,7 @@
 colorScheme = "congo"
 defaultAppearance = "light"
 autoSwitchAppearance = true
-web3forms_key = "PLACEHOLDER"
+web3forms_key = "4696bc57-abc0-41bb-9825-1e7e9975af93"
 customCSS = ["css/custom.css"]
 
 [homepage]
