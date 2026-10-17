@@ -3,6 +3,3 @@ baseURL = "https://le-lavardin.com/"
 defaultContentLanguage = "fr"
 defaultContentLanguageInSubdir = false
 enableRobotsTXT = true
-
-[markup.goldmark.renderer]
-  unsafe = true
