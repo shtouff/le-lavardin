@@ -9,11 +9,6 @@
   weight = 20
 
 [[main]]
-  name = "Getting here"
-  pageRef = "acces"
-  weight = 30
-
-[[main]]
   name = "Contact"
   pageRef = "contact"
   weight = 40
