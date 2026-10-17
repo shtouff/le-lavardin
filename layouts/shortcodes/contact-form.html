@@ -1,8 +1,7 @@
-<form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+<form id="contact-form" action="https://api.web3forms.com/submit" method="POST" class="contact-form">
   <input type="hidden" name="access_key" value="{{ .Site.Params.web3forms_key }}">
   <input type="hidden" name="subject" value="Contact - Le Lavardin">
   <input type="hidden" name="from_name" value="Le Lavardin Contact">
-  <input type="hidden" name="redirect" value="false">
   <input type="checkbox" name="botcheck" style="display:none;">
 
   <div class="form-group">
@@ -25,5 +24,40 @@
     <textarea id="cf-message" name="message" rows="6" required></textarea>
   </div>
 
-  <button type="submit">{{ i18n "form_send" }}</button>
+  <button type="submit" id="cf-submit">{{ i18n "form_send" }}</button>
+  <p id="cf-result" style="display:none;"
+     data-success="{{ i18n "form_success" }}"
+     data-error="{{ i18n "form_error" }}"></p>
 </form>
+
+<script>
+document.getElementById('contact-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  var btn = document.getElementById('cf-submit');
+  var result = document.getElementById('cf-result');
+  btn.disabled = true;
+  fetch('https://api.web3forms.com/submit', {
+    method: 'POST',
+    body: new FormData(this)
+  })
+  .then(function(res) { return res.json(); })
+  .then(function(data) {
+    result.style.display = 'block';
+    if (data.success) {
+      result.textContent = result.dataset.success;
+      result.style.color = 'green';
+      document.getElementById('contact-form').reset();
+    } else {
+      result.textContent = result.dataset.error;
+      result.style.color = 'red';
+      btn.disabled = false;
+    }
+  })
+  .catch(function() {
+    result.style.display = 'block';
+    result.textContent = result.dataset.error;
+    result.style.color = 'red';
+    btn.disabled = false;
+  });
+});
+</script>

@@ -12,7 +12,3 @@ form_success:
   other: "Message sent, thank you!"
 form_error:
   other: "An error occurred, please try again."
-nav_language:
-  other: "Français"
-footer_copyright:
-  other: "© Le Lavardin"
