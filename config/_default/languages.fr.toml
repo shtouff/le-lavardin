@@ -1,5 +1,4 @@
-languageCode = "fr"
-languageName = "Français"
+locale = "fr"
+label = "Français"
 weight = 1
 title = "Le Lavardin"
-contentDir = "content/fr"

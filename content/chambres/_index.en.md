@@ -1,5 +1,6 @@
 +++
 title = "Our Rooms"
+slug = "rooms"
 description = "Discover our comfortable rooms"
 +++
 

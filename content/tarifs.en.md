@@ -1,5 +1,6 @@
 +++
 title = "Rates"
+slug = "rates"
 description = "Our seasonal rates"
 +++
 
