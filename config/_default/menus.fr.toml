@@ -14,6 +14,11 @@
   weight = 35
 
 [[main]]
+  name = "Liens utiles"
+  pageRef = "liens"
+  weight = 38
+
+[[main]]
   name = "Contact"
   pageRef = "contact"
   weight = 40
