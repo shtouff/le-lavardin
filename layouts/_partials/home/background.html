@@ -1,3 +1,12 @@
+<style>
+@media (max-width: 640px) {
+  #banner-overlay-logo  { height: 52px !important; }
+  #banner-overlay-title { font-size: 1.95rem !important; }
+  #banner-overlay-sub   { font-size: 0.98rem !important; }
+  #banner-overlay-inner { gap: 1rem !important; }
+}
+</style>
+
 {{/* Full-width banner — breaks out of body padding via 100vw trick */}}
 <a href="{{ "" | relLangURL }}"
    style="display:block; width:100vw; margin-left:calc(50% - 50vw); position:relative; overflow:hidden; text-decoration:none; aspect-ratio:10/3;">
@@ -7,13 +16,14 @@
        style="width:100%; height:100%; object-fit:cover; object-position:center; display:block;"
        loading="eager">
   <div style="position:absolute; inset:0; background:rgba(0,0,0,0.2);
-              display:flex; align-items:center; justify-content:center; gap:2rem;">
+              display:flex; align-items:center; justify-content:center; gap:2rem;" id="banner-overlay-inner">
     <img src="/img/logo-blanc.png"
          alt="Le Lavardin"
+         id="banner-overlay-logo"
          style="height:75px; width:auto; filter:drop-shadow(0 2px 4px rgba(0,0,0,0.5));">
     <div style="color:white; text-shadow:0 2px 6px rgba(0,0,0,0.6); line-height:1.2;">
-      <p style="font-size:2.8rem; font-weight:800; letter-spacing:0.12em; text-transform:uppercase; margin:0;">Le Lavardin</p>
-      <p style="font-size:1.4rem; font-weight:300; letter-spacing:0.04em; margin:0.3rem 0 0;">Chambre d&rsquo;hôtes &amp; gîte à La Rochelle</p>
+      <p id="banner-overlay-title" style="font-size:2.8rem; font-weight:800; letter-spacing:0.12em; text-transform:uppercase; margin:0;">Le Lavardin</p>
+      <p id="banner-overlay-sub" style="font-size:1.4rem; font-weight:300; letter-spacing:0.04em; margin:0.3rem 0 0;">Chambre d&rsquo;hôtes &amp; gîte à La Rochelle</p>
     </div>
   </div>
 </a>
