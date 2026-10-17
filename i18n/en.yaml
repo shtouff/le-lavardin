@@ -1,0 +1,18 @@
+form_name:
+  other: "Name"
+form_email:
+  other: "Email"
+form_phone:
+  other: "Phone"
+form_message:
+  other: "Message"
+form_send:
+  other: "Send"
+form_success:
+  other: "Message sent, thank you!"
+form_error:
+  other: "An error occurred, please try again."
+nav_language:
+  other: "Français"
+footer_copyright:
+  other: "© Le Lavardin"
