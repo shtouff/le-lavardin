@@ -65,8 +65,8 @@
 
 {{/* Nav below banner */}}
 <nav class="py-6 font-semibold text-neutral-900 dark:text-neutral print:hidden">
-  <ul class="flex list-none flex-col text-end sm:flex-row sm:items-center">
-    <li class="mb-1 sm:mb-0" style="margin-right:auto; text-align:left">
+  <ul class="flex list-none flex-row flex-wrap items-center" style="gap:0.25rem 1.5rem">
+    <li style="margin-right:auto">
       <a href="{{ "" | relLangURL }}"
          class="group decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2">
         {{ if eq .Site.Language.Lang "fr" }}Accueil{{ else }}Home{{ end }}
