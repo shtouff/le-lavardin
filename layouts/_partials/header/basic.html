@@ -1,5 +1,23 @@
 <style>
+#site-banner {
+  display: block;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  padding-bottom: 30%; /* ratio 10:3 desktop */
+}
+#banner-img {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
 @media (max-width: 640px) {
+  #site-banner       { padding-bottom: 50%; } /* ratio 2:1 sur mobile */
   #banner-overlay-logo  { height: 52px !important; }
   #banner-overlay-title { font-size: 1.95rem !important; }
   #banner-overlay-sub   { font-size: 0.98rem !important; }
@@ -8,12 +26,10 @@
 </style>
 
 {{/* Full-width banner — breaks out of body padding via 100vw trick */}}
-<a href="{{ "" | relLangURL }}"
-   style="display:block; width:100vw; margin-left:calc(50% - 50vw); position:relative; overflow:hidden; text-decoration:none; aspect-ratio:10/3;">
+<a id="site-banner" href="{{ "" | relLangURL }}">
   <img id="banner-img"
        src="/img/banner-lr-vue.jpg"
        alt="Le Lavardin"
-       style="width:100%; height:100%; object-fit:cover; object-position:center; display:block;"
        loading="eager">
   <div style="position:absolute; inset:0; background:rgba(0,0,0,0.2);
               display:flex; align-items:center; justify-content:center; gap:2rem;"
