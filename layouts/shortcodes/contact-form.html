@@ -1,0 +1,29 @@
+<form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+  <input type="hidden" name="access_key" value="{{ .Site.Params.web3forms_key }}">
+  <input type="hidden" name="subject" value="Contact - Le Lavardin">
+  <input type="hidden" name="from_name" value="Le Lavardin Contact">
+  <input type="hidden" name="redirect" value="false">
+  <input type="checkbox" name="botcheck" style="display:none;">
+
+  <div class="form-group">
+    <label for="cf-name">{{ i18n "form_name" }}</label>
+    <input type="text" id="cf-name" name="name" required>
+  </div>
+
+  <div class="form-group">
+    <label for="cf-email">{{ i18n "form_email" }}</label>
+    <input type="email" id="cf-email" name="email" required>
+  </div>
+
+  <div class="form-group">
+    <label for="cf-phone">{{ i18n "form_phone" }}</label>
+    <input type="tel" id="cf-phone" name="phone">
+  </div>
+
+  <div class="form-group">
+    <label for="cf-message">{{ i18n "form_message" }}</label>
+    <textarea id="cf-message" name="message" rows="6" required></textarea>
+  </div>
+
+  <button type="submit">{{ i18n "form_send" }}</button>
+</form>
