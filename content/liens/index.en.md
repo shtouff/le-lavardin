@@ -9,12 +9,12 @@ Would you like to take to the sea while you're in the Charente-Maritime — whet
 
 We recommend the two sailing schools below. We learned with them ourselves, and they're absolutely top-notch! 😉
 
-[![Nomade Voile](logo-nomadevoile.png)](http://www.nomadevoile.com)
+[![Nomade Voile](logo-nomadevoile.webp)](http://www.nomadevoile.com)
 
-[![Yakapartir](logo-yakapartir.png)](https://www.yakapartir.com)
+[![Yakapartir](logo-yakapartir.webp)](https://www.yakapartir.com)
 
 ## Bike hire
 
 In Saint-Martin-de-Ré, hire your bikes from Yootoo. Excellent quality, lovingly maintained — and those stylish black bikes with white polka dots are quite a sight!
 
-[![Yootoo](yootoo.png)](https://www.cycles-yootoo.com/)
+[![Yootoo](yootoo.webp)](https://www.cycles-yootoo.com/)
