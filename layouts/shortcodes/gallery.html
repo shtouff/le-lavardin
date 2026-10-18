@@ -1,12 +1,64 @@
 {{ $glob := .Get "glob" }}
 {{ $images := cond (not (not $glob)) (.Page.Resources.Match $glob) (.Page.Resources.ByType "image") }}
 {{ if $images }}
+<style>
+#lb-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(0,0,0,0.92);
+  align-items: center;
+  justify-content: center;
+  cursor: zoom-out;
+}
+#lb-overlay.open { display: flex; }
+#lb-overlay img {
+  max-width: 95vw;
+  max-height: 95vh;
+  object-fit: contain;
+  border-radius: 4px;
+  cursor: default;
+}
+</style>
+
+<div id="lb-overlay" role="dialog" aria-modal="true">
+  <img id="lb-img" src="" alt="">
+</div>
+
 <div class="grid grid-cols-2 gap-2 my-6 sm:grid-cols-3">
   {{ range $images }}
-    <a href="{{ .RelPermalink }}" target="_blank" rel="noopener">
-      <img src="{{ .RelPermalink }}" alt="{{ $.Page.Title }}"
-           class="rounded-md w-full" loading="lazy">
-    </a>
+    <img src="{{ .RelPermalink }}"
+         alt="{{ $.Page.Title }}"
+         class="rounded-md w-full cursor-zoom-in"
+         loading="lazy"
+         onclick="lbOpen(this.src)">
   {{ end }}
 </div>
+
+<script>
+(function () {
+  var overlay = document.getElementById('lb-overlay');
+  var img     = document.getElementById('lb-img');
+
+  window.lbOpen = function (src) {
+    img.src = src;
+    overlay.classList.add('open');
+    history.pushState({ lightbox: true }, '');
+  };
+
+  function lbClose() {
+    overlay.classList.remove('open');
+    img.src = '';
+  }
+
+  overlay.addEventListener('click', function (e) {
+    if (e.target === overlay) { history.back(); }
+  });
+
+  window.addEventListener('popstate', function (e) {
+    if (overlay.classList.contains('open')) { lbClose(); }
+  });
+})();
+</script>
 {{ end }}

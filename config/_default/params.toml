@@ -23,3 +23,4 @@ customCSS = ["css/custom.css"]
 [footer]
   showCopyright = true
   showThemeAttribution = false
+  showScrollToTop = false
