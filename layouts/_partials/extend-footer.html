@@ -1,0 +1,63 @@
+<style>
+#lb-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(0,0,0,0.92);
+  align-items: center;
+  justify-content: center;
+  cursor: zoom-out;
+}
+#lb-overlay.open { display: flex; }
+#lb-overlay img {
+  max-width: 95vw;
+  max-height: 95vh;
+  object-fit: contain;
+  border-radius: 4px;
+  cursor: default;
+}
+</style>
+
+<div id="lb-overlay" role="dialog" aria-modal="true">
+  <img id="lb-img" src="" alt="">
+</div>
+
+<script>
+(function () {
+  var overlay = document.getElementById('lb-overlay');
+  var img     = document.getElementById('lb-img');
+
+  window.lbOpen = function (src, alt) {
+    img.src = src;
+    img.alt = alt || '';
+    overlay.classList.add('open');
+    history.pushState({ lightbox: true }, '');
+  };
+
+  function lbClose() {
+    overlay.classList.remove('open');
+    img.src = '';
+  }
+
+  overlay.addEventListener('click', function (e) {
+    if (e.target === overlay) { history.back(); }
+  });
+
+  window.addEventListener('popstate', function () {
+    if (overlay.classList.contains('open')) { lbClose(); }
+  });
+
+  /* Applique le lightbox à toutes les images de contenu */
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.prose img, article img').forEach(function (el) {
+      /* Exclut les images déjà gérées par le shortcode gallery ou le header */
+      if (el.closest('#site-banner') || el.closest('#lb-overlay') || el.closest('nav')) return;
+      el.style.cursor = 'zoom-in';
+      el.addEventListener('click', function () {
+        lbOpen(el.src, el.alt);
+      });
+    });
+  });
+})();
+</script>
