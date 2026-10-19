@@ -48,6 +48,10 @@
     if (overlay.classList.contains('open')) { lbClose(); }
   });
 
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && overlay.classList.contains('open')) { history.back(); }
+  });
+
   /* Applique le lightbox à toutes les images de contenu */
   document.addEventListener('DOMContentLoaded', function () {
     document.querySelectorAll('.prose img, article img').forEach(function (el) {
