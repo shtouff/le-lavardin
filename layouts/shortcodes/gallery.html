@@ -4,7 +4,7 @@
 <div class="grid grid-cols-2 gap-2 my-6 sm:grid-cols-3">
   {{ range $images }}
     <img src="{{ .RelPermalink }}"
-         alt="{{ $.Page.Title }}"
+         alt="{{ with .Title }}{{ . }}{{ else }}{{ $.Page.Title }}{{ end }}"
          class="rounded-md w-full cursor-zoom-in"
          loading="lazy"
          onclick="lbOpen(this.src, this.alt)">
