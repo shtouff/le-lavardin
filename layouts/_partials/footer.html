@@ -27,7 +27,7 @@
 
     {{/* Social icons — footer menu, centré */}}
     {{ if .Site.Menus.footer }}
-      <nav class="flex items-center gap-4 text-neutral-500 dark:text-neutral-400">
+      <nav class="flex items-center gap-4 text-sm text-neutral-500 dark:text-neutral-400">
         {{ range .Site.Menus.footer }}
           {{ if eq .Params.action "locale" }}{{ continue }}{{ end }}
           {{ if eq .Params.action "appearance" }}{{ continue }}{{ end }}
@@ -36,7 +36,7 @@
              {{ with .Params.rel }}rel="{{ . }}"{{ end }}
              {{ with .Params.target }}target="{{ . }}"{{ end }}
              class="hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
-            {{ with .Params.icon }}{{ partial "icon.html" . }}{{ end }}
+            {{ if .Params.icon }}{{ partial "icon.html" .Params.icon }}{{ else }}{{ .Name }}{{ end }}
           </a>
         {{ end }}
       </nav>

@@ -18,6 +18,11 @@
     target = "_blank"
     rel = "noopener noreferrer"
 
+[[footer]]
+  name = "Confidentialité"
+  pageRef = "confidentialite"
+  weight = 30
+
 [[main]]
   name = "Chambres"
   pageRef = "chambres"

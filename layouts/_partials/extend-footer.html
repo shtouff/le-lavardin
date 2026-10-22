@@ -59,7 +59,7 @@
       if (el.closest('#site-banner') || el.closest('#lb-overlay') || el.closest('nav')) return;
       el.style.cursor = 'zoom-in';
       el.addEventListener('click', function () {
-        lbOpen(el.src, el.alt);
+        lbOpen(el.dataset.full || el.src, el.alt);
       });
     });
   });
